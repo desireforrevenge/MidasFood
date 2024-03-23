@@ -1,0 +1,43 @@
+.main_dish_picture {
+    position: absolute;
+
+    right: 0px;
+    top: 126px;
+
+    // width: 73.13%;
+    // height: max-content;
+}
+
+
+
+
+@media screen and (max-width: 550px) {
+
+}
+@media screen and (min-width: 550px) and (max-width: 768px) {
+
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+}
+@media screen and (min-width: 1024px) and (max-width: 1300px) {
+    .main_dish_picture {
+        right: -396px;
+        //НУЖНО УКАЗЫВАТЬ В ПРОЦЕНТАХ!
+        top: 85px;
+    }
+}
+@media screen and (min-width: 1300px) and (max-width: 1600px) {
+
+}
+@media screen and (min-width: 1600px) and (max-width: 1920px) {
+    .main_dish_picture {
+        right: 0px;
+        top: 126px;
+    }
+}
+@media screen and (min-width: 1920px) {
+    .main_dish_picture {
+        right: 0px;
+        top: 126px;
+    }
+}
