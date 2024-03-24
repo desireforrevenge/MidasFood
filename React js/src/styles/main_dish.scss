@@ -1,35 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+// font-family: "Montserrat", sans-serif;
+
 .main_dish_picture {
     position: absolute;
 
     right: 0px;
-    top: 126px;
 
     // width: 73.13%;
     // height: max-content;
 }
 
+.main_dish_picture_1024px {
+    position: absolute;
 
-
-
-@media screen and (max-width: 550px) {
-
+    display: none;
 }
-@media screen and (min-width: 550px) and (max-width: 768px) {
 
+.main_dish_picture_768px {
+    position: absolute;
+
+    z-index: 2;
+
+    display: none;
 }
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+
+
+.main_dish_frame {
+    position: relative;
+
+    // background-color: rgb(200, 255, 0);
+
+    width: 355.24px;
+    height: 357.93px;
+
+    left: 502px;
+    top: 587px;
 }
-@media screen and (min-width: 1024px) and (max-width: 1300px) {
+
+.frame_background_main {
+    position: absolute;
+
+    width: 337px;
+    height: 284px;
+
+    left: 1.97%;
+    top: 5.87%;
+}
+
+.frame_background_right {
+    position: absolute;
+
+    width: 119.49px;
+    height: 266.47px;
+
+    left: calc(100% - 119.49px);;
+    top: 3.37%;
+}
+
+.frame_background_left {
+    position: absolute;
+
+    width: 119.49px;
+    height: 266.47px;
+
+    left: 0.35%;
+    top: 0%;
+}
+
+.frame_background_up {
+    position: absolute;
+
+    width: 337.06px;
+    height: 100.59px;
+
+    left: 2.11%;
+    top: 0%;
+}
+
+.frame_background_down {
+    position: absolute;
+
+    width: 355.24px;
+    height: 199.12px;
+
+    left: 0%;
+    top: 44.37%;
+}
+
+.name {
+    position: absolute;
+
+    z-index: 5;
+
+    width: 220px;
+    height: 60px;
+
+    left: 15.76%;
+    top: 10.34%;
+
+    color: rgb(255, 255, 255);
+    font-family: "Montserrat", sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.weight_frame {
+    position: absolute;
+
+    z-index: 3;
+
+    width: 47px;
+    height: 20px;
+
+    left: 15.48%;
+    top: 28.5%;
+
+    display: flex;
+    justify-content: center;
+
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.weight {
+    position: absolute;
+
+    z-index: 5;
+
+    color: rgb(255, 255, 255);
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.description {
+    position: absolute;
+
+    z-index: 3;
+
+    width: 231px;
+    height: 103px;
+
+    left: 15.76%;
+    top: 36.04%;
+
+    color: rgba(255, 255, 255, 0.8);
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.price {
+    position: absolute;
+
+    z-index: 3;
+
+    width: 87px;
+    height: 28px;
+
+    left: 15.76%;
+    top: 72.64%;
+
+    color: rgb(255, 255, 255);
+    font-family: "Montserrat", sans-serif;
+    font-size: 23px;
+    font-weight: 800;
+    line-height: 28px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.to_basket_button_styles {
+    position: absolute;
+
+    z-index: 3;
+
+    display: flex;
+    justify-content: center;
+
+    width: 127px;
+    height: 42px;
+
+    left: 45.35%;
+    top: 70.67%;
+
+    box-shadow: 0px 10px 31px 0px rgba(15, 15, 17, 0.2);
+    background-color: #FBD13E;
+
+    transition: 0.3s;
+}
+
+.to_basket_button_text {
+    position: absolute;
+
+    z-index: 5;
+
+    width: 93px;
+    height: 20px;
+
+    top: 10px;
+
+    color: rgb(0, 0, 0);
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 10%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.to_basket_button:hover .to_basket_button_styles {
+    box-shadow: 0px 10px 31px 0px rgba(15, 15, 17, 0.2);
+    background: #DBB325;
+}
+
+
+
+
+
+@media screen and (max-width: 549px) {
     .main_dish_picture {
-        right: -396px;
-        //НУЖНО УКАЗЫВАТЬ В ПРОЦЕНТАХ!
-        top: 85px;
+        display: none;
     }
 }
-@media screen and (min-width: 1300px) and (max-width: 1600px) {
+@media screen and (min-width: 550px) and (max-width: 767px) {
+    .main_dish_picture {
+        display: none;
+    }
+
+    .main_dish_picture_768px {
+        display: block;
+
+        width: 98.05%;
+        height: auto;
+
+        right: 0px;
+        top: 324px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 969px) {
+    .main_dish_picture {
+        display: none;
+    }
+
+    .main_dish_picture_1024px {
+        right: 0px;
+        top: 126px;
+        
+        width: 58.33%;
+        height: auto;
+        
+        display: block;
+    }
+}
+@media screen and (min-width: 970px) and (max-width: 1299px) {
+    .main_dish_picture {
+        display: none;
+    }
+
+    .main_dish_picture_1024px {
+        right: 0px;
+        top: 126px;
+        
+        display: block;
+    }
 
 }
-@media screen and (min-width: 1600px) and (max-width: 1920px) {
+@media screen and (min-width: 1300px) and (max-width: 1599px) {
+    .main_dish_picture {
+        top: 126px;
+
+        width: 73.13%;
+    }
+}
+@media screen and (min-width: 1600px) and (max-width: 1919px) {
     .main_dish_picture {
         right: 0px;
         top: 126px;
