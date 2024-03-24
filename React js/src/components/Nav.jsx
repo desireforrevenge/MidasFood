@@ -27,7 +27,7 @@ export default function Nav() {
         window.removeEventListener('scroll', handleScroll);
       };
     }, []);
-    
+
     return (
 <>          
         <nav className={scrolled ? 'navbar scrolled' : 'navbar'}>

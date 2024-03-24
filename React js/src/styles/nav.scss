@@ -87,20 +87,14 @@ button {
 .search_button {
     position: absolute;
     left: 88.93%;
-
-    transition: fill 0.5s;
 }
 .profile_button {
     position: absolute;
     left: 93.2%;
-
-    transition: fill 0.5s;
 }
 .basket_button {
     position: absolute;
     left: 96.87%;
-
-    transition: fill 0.5s;
 }
 .search_button:hover svg path{
     fill: #FBD13E;
