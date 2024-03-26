@@ -14,32 +14,46 @@ import frame_background_left from '../assets/frame_background_left.svg'
 import frame_background_up from '../assets/frame_background_up.svg'
 import frame_background_down from '../assets/frame_background_down.svg'
 
+import { listData } from '../data/getMainDish.js';
+
 
 
 export default function MainDish() {
+    const [mainDishInfo, setMainDishInfo] = useState([]);
+
+    useEffect(() => {
+        listData().then((response) => {
+            setMainDishInfo(response.data);
+        }).catch(error => {
+            console.error(error);
+        });
+    }, []);
+
+
     return (
         <>
         <img src={main} alt="" className='main_dish_picture'/>
         <img src={main_1024px} alt="" className='main_dish_picture_1024px'/>
         <img src={main_768px} alt="" className='main_dish_picture_768px'/>
 
+        {mainDishInfo.map((dishInfo, index) => (
         <div className='main_dish_frame'>
             <p className='name'>
-                Стейк из лосося с овощами
+                {dishInfo.name}
             </p>
 
             <div className='weight_frame'>
                 <p className='weight'>
-                    250 г
+                    {dishInfo.weight} г
                 </p>
             </div>
 
             <p className='description'>
-                Нежный стейк дикого лосося, пропитанный соком и ароматом слегка обжаренных фермерских овощей
+                {dishInfo.description}
             </p>
 
             <p className='price'>
-                1 200 ₽
+                {dishInfo.cost} ₽
             </p>
 
             <button className='to_basket_button'>
@@ -55,6 +69,8 @@ export default function MainDish() {
             <img src={frame_background_up} alt="" className='frame_background_up'/>
             <img src={frame_background_down} alt="" className='frame_background_down'/>
         </div>
+            ))}
+        
         </>
     );
 }
