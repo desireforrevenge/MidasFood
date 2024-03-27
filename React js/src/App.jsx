@@ -2,12 +2,13 @@ import { useState } from 'react'
 
 import './styles/default.scss'
 import './styles/home.scss'
-import Nav from './components/Nav'
-import Description from './components/Description'
-import Contacts from './components/Contacts'
-import Rectangles from './components/Rectangles'
-import Heading from './components/Heading'
-import MainDish from './components/MainDish'
+import Nav from './components/main/nav/Nav'
+import Description from './components/main/description/Description'
+import Contacts from './components/main/contacts/Contacts'
+import Rectangles from './components/main/rectangles/Rectangles'
+import Heading from './components/main/heading/Heading'
+import MainDish from './components/main/main_dish/MainDish'
+import SecondMainDish from './components/main/second_main_dish/SecondMainDish'
 
 
 
@@ -20,6 +21,7 @@ export default function App() {
       <Contacts></Contacts>
       <Rectangles></Rectangles>
       <MainDish></MainDish>
+      <SecondMainDish></SecondMainDish>
       <Heading></Heading>
     </>
   )
