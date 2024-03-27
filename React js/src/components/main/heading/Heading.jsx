@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 
-import '../styles/heading.scss';
+import classes from './heading.module.scss';
 
 export default function Heading() {
 
     return (
         <>
-            <p className='heading_text'>Популярные блюда</p>
+            <p className={`${classes.heading_text}`}>Популярные блюда</p>
         </>
     );
 }

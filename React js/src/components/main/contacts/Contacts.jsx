@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-import '../styles/contacts.scss';
-import { listData } from '../data/getContacts.js';
+import classes from './contacts.module.scss';
+
+import { listData } from '../../../data/getContacts.js';
 
 export default function MainContacts() {
     const [contacts, setContacts] = useState([]);
@@ -17,10 +18,10 @@ export default function MainContacts() {
     return (
         <>
             {contacts.map((contact, index) => (
-                <>
-                    <p key={contact.phone_number} className='phone_number'>{contact.phone_number}</p>
-                    <p key={contact.email} className='email'>{contact.email}</p>
-                </>
+                <div key={index}>
+                    <p className={`${classes.phone_number}`}>{contact.phone_number}</p>
+                    <p className={`${classes.email}`}>{contact.email}</p>
+                </div>
             ))}
         </>
     );
